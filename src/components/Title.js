@@ -2,11 +2,15 @@ import React from "react";
 
 const Title = () => (
   <div style={styles}>
-    <h1>Todo App</h1>
+    <h1 style={styles.logo}>Todo App</h1>
   </div>
 );
 const styles = {
-  background: "steelblue"
+  background: "steelblue",
+  logo: {
+    color: "#eee",
+    textAlign: "center"
+  }
 };
 
 export default Title;
