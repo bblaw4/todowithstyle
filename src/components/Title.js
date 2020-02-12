@@ -6,7 +6,7 @@ const Title = () => (
   </div>
 );
 const styles = {
-  background: "lightblue"
+  background: "steelblue"
 };
 
 export default Title;

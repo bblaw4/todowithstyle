@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles.css";
 import AddTodoForm from "./components/AddTodoForm";
 import Title from "./components/Title";
@@ -7,7 +7,6 @@ import Todo from "./components/Todo";
 export default function App() {
   // state
   const [todos, setTodos] = useState([]);
-
   // addTodo
   const addTodo = data => {
     setTodos([...todos, data]);

@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0;
 }
-.App {
-  font-family: sans-serif;
+body {
+  font-family: "Lemonada", cursive;
 }
+
 span:hover {
   cursor: pointer;
 }
