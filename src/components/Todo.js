@@ -10,7 +10,7 @@ function Todo({ todos, removedTodos }) {
     >
       {props => (
         <div style={props}>
-          <div style={style}>
+          <div style={styles.card}>
             <div className="card-body">
               <span onClick={() => removedTodos(id)}>{title}</span>
             </div>
@@ -21,11 +21,13 @@ function Todo({ todos, removedTodos }) {
   );
 }
 
-const style = {
-  background: "steelblue",
-  padding: "1.5rem",
-  color: "white",
-  margin: "5px"
+const styles = {
+  card: {
+    background: "steelblue",
+    padding: "1.5rem",
+    color: "white",
+    margin: "5px"
+  }
 };
 
 export default Todo;

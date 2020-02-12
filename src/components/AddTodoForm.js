@@ -18,14 +18,13 @@ const AddTodoForm = ({ addTodo }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>Title</label>
         <input
           type="text"
           placeholder="Enter a Todo"
           value={title}
           onChange={e => setTitle(e.target.value)}
         />
-        <button>Add</button>
+        <input type="submit" value="Add" />
       </form>
     </div>
   );
