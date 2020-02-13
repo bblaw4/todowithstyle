@@ -1,7 +1,8 @@
 import React from "react";
+import Moment from "react-moment";
 import { Spring } from "react-spring/renderprops";
 
-function Todo({ todos, removedTodos }) {
+function Todo({ todos, removedTodos, date, due }) {
   const { title, id } = todos;
   return (
     <Spring
@@ -12,7 +13,15 @@ function Todo({ todos, removedTodos }) {
         <div style={props}>
           <div style={styles.card}>
             <div className="card-body">
-              <span onClick={() => removedTodos(id)}>{title}</span>
+              <span onClick={() => removedTodos(id)}>
+                {title} - Due:
+                <Moment fromNow>{due}</Moment>
+              </span>
+              <div style={{ float: "right" }}>
+                <Moment fromNow interval>
+                  {date}
+                </Moment>
+              </div>
             </div>
           </div>
         </div>

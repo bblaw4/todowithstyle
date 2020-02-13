@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import AddTodoForm from "./components/AddTodoForm";
 import Title from "./components/Title";
@@ -9,6 +9,7 @@ export default function App() {
   const [todos, setTodos] = useState([]);
   // addTodo
   const addTodo = data => {
+    console.log(data);
     setTodos([...todos, data]);
   };
 
@@ -20,7 +21,14 @@ export default function App() {
 
   // render a list of todos
   const renderTodos = todos.map(todo => (
-    <Todo key={todo.id} todos={todo} id={todo.id} removedTodos={removeTodo} />
+    <Todo
+      key={todo.id}
+      todos={todo}
+      id={todo.id}
+      removedTodos={removeTodo}
+      date={todo.date}
+      due={todo.dueDate}
+    />
   ));
   return (
     <div className="App">
