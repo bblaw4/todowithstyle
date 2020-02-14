@@ -4,6 +4,7 @@ import { Spring } from "react-spring/renderprops";
 
 function Todo({ todos, removedTodos, date, due }) {
   const { title, id } = todos;
+
   return (
     <Spring
       from={{ opacity: 0, marginTop: -500 }}
